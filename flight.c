@@ -28,7 +28,6 @@ struct flight*	flight_create(const char *airline, uint16_t number,
 
                 }
 
-                struct airport** new_f_stops;
 
                 int i = 0;
                 void* original_addr = stops[0];
@@ -103,7 +102,7 @@ char*		flight_code(const struct flight* this_flight){
             }
 
             char* numChars = mem + i;
-            sprintf(numChars, "%f", this_flight->f_number);
+            sprintf(numChars, "%d", this_flight->f_number);
 
 
 
