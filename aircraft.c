@@ -64,7 +64,7 @@ void			ac_hold(struct aircraft *craft){
 void			ac_release(struct aircraft *craft){
 
                     craft->refs--;
-                    if(craft->refs = 0){
+                    if(craft->refs == 0){
                         free(craft);
                     }
 
