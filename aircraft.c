@@ -97,8 +97,8 @@ enum aircraft_kind	ac_kind(const struct aircraft *craft){
  */
 const char*		ac_registration(const struct aircraft *craft){
 
-                craft->reg;
-
+              return  craft->reg;
+        
 
 
 };
