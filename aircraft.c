@@ -49,9 +49,11 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
                 char* new_craft_reg = temp;
                 for(int i = 0; i < 6; i++){
 
-                    temp = temp + i;
-                    *temp = *(reg+i);
-
+                    temp = temp + sizeof(char);
+                    *temp = *(reg+i*sizeof(char));
+                    printf("\n %d", i);
+                    printf("\n %c", *temp);
+                    printf("\n %p", temp);
                 }
                 new_craft->reg = new_craft_reg;
                 new_craft->refs = 1;
@@ -117,19 +119,30 @@ const char*		ac_registration(const struct aircraft *craft){
 
         const char* reg_craft = malloc(6);
         char* temp = reg_craft;
-        for(int i = 0; i < 6; i++){
-            
-            temp = temp+ i;
-            *temp = 'c';
+        
+        *temp = 'a';
+        temp = temp+1;
+        *temp = 'b';
+        temp = temp+1;
+        *temp = 'c';
+        temp = temp+1;
+        *temp = 'd';
+        temp = temp+1;
+        *temp = 'e';
+        temp = temp +1;
+        *temp = 'f';
 
-            printf("%c", *temp );
-        }
+
+////            printf("%c", *temp );
 
         struct aircraft* craft = ac_create(AC_FIXED, reg_craft);
 
         
     }
-*/
+
+
+    */
+
 #endif
 
 
