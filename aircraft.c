@@ -46,7 +46,6 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
 				new_craft->kind = kind;
 				
                 char* temp = malloc(6*sizeof(char));
-                char* new_craft_reg = temp;
                 for(int i = 0; i < 6; i++){
 
                     temp = temp + (i*sizeof(char));
@@ -57,7 +56,9 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
                     printf("\n %c", *temp);
                     //printf("\n %p", temp);
                 }
-                new_craft->reg = new_craft_reg;
+                
+                
+                new_craft->reg = temp - 5*(sizeof(char));
                 new_craft->refs = 1;
                 
                 return new_craft;
