@@ -21,7 +21,7 @@
 
 struct aircraft{
 	enum aircraft_kind kind;
-	const char* reg;
+	char* reg;
     unsigned int refs;
 		
 
