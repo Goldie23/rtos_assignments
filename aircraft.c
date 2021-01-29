@@ -45,14 +45,14 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
 				struct aircraft* new_craft = malloc(sizeof(struct aircraft));
 				new_craft->kind = kind;
 				
-                char* temp = reg;
-                for(int i = 0; i < 5; i++){
+                char* temp = malloc(6*sizeof(char));
+                for(int i = 0; i < 6; i++){
 
                     temp = temp + i;
                     *temp = *(reg+i);
 
                 }
-                char* new_craft_reg = temp - 4;
+                char* new_craft_reg = temp - 5;
                 new_craft->reg = new_craft_reg;
                 new_craft->refs = 1;
                 
@@ -74,6 +74,7 @@ void			ac_release(struct aircraft *craft){
 
                     craft->refs--;
                     if(craft->refs == 0){
+                        free(craft->reg);
                         free(craft);
                     }
 
