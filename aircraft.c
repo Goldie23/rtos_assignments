@@ -54,7 +54,7 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
                    
 
                     //printf("\n %d", i);
-                    //printf("\n %c", *temp);
+                    printf("\n %c", *temp);
                     //printf("\n %p", temp);
                 }
                 new_craft->reg = new_craft_reg;
