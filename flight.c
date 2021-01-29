@@ -46,8 +46,8 @@ struct flight*	flight_create(const char *airline, uint16_t number,
                 new_flight->f_number = number;
                 new_flight->f_stops = original_addr - i;
 
-
-};
+                return new_flight;
+}
 
 /**
  * Release a flight.
@@ -61,7 +61,7 @@ void		flight_free(struct flight* this_flight){
                 }
 
 
-};
+}
 
 /**
  * Change (or set) a flight's aircraft.
@@ -79,7 +79,7 @@ void		flight_change_equipment(struct flight* this_flight, struct aircraft* craft
 
 
 
-};
+}
 
 /**
  * Construct a human-readable flight number.
@@ -110,6 +110,6 @@ char*		flight_code(const struct flight* this_flight){
             return mem;                                                
 
 
-};
+}
 
 #endif

@@ -47,8 +47,8 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
 				new_craft->reg = reg;
                 new_craft->refs = 0;
                 
-
-};
+                return new_craft;
+}
 
 /** Increase an aircraft's reference count. */
 void			ac_hold(struct aircraft *craft){
@@ -58,7 +58,7 @@ void			ac_hold(struct aircraft *craft){
 
 
                 
-};
+}
 
 /** Decrease and possibly free an aircraft. */
 void			ac_release(struct aircraft *craft){
@@ -69,7 +69,7 @@ void			ac_release(struct aircraft *craft){
                     }
 
 
-};
+}
 
 
 
@@ -80,7 +80,7 @@ unsigned int		ac_refcount(const struct aircraft *craft){
 
             return craft->refs;
 
-};
+}
 
 /** Retrieve an aircraft's type (fixed-wing, rotary, etc.). */
 enum aircraft_kind	ac_kind(const struct aircraft *craft){
@@ -101,7 +101,7 @@ const char*		ac_registration(const struct aircraft *craft){
         
 
 
-};
+}
 
 
 

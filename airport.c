@@ -25,14 +25,17 @@
         new_port->flight_size = 0;
         new_port->refs = 0;
 
- };
+
+        return new_port;
+
+ }
 
  /** Retrieve a airport's ICAO code. */
  const char* ap_code(const struct airport* port){
             return port->icao_code;
 
 
- };
+ }
 
  /**
   * Add a flight to an airport's list of flights.
@@ -67,7 +70,7 @@
             return -1;
 
 
- };
+ }
 
  /**
   * Copy pointers to flights into a caller-provided array.
@@ -100,7 +103,7 @@
 
 
 
- };
+ }
 
  /** Increment a airport's refcount. */
  void        ap_hold(struct airport* port){
@@ -120,7 +123,7 @@
 
                 free(port);
 
- };
+ }
 
  /** Retrieve the current reference count of a airport. */
  unsigned int    ap_refcount(const struct airport* port){
