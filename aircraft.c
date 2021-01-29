@@ -7,7 +7,7 @@
 
 
 #include <stdlib.h>
-
+#include <stdio.h>
 #include "aircraft.h"
 #include "airport.h"
 #include "flight.h"
@@ -46,13 +46,13 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
 				new_craft->kind = kind;
 				
                 char* temp = malloc(6*sizeof(char));
+                char* new_craft_reg = temp;
                 for(int i = 0; i < 6; i++){
 
                     temp = temp + i;
                     *temp = *(reg+i);
 
                 }
-                char* new_craft_reg = temp - 5;
                 new_craft->reg = new_craft_reg;
                 new_craft->refs = 1;
                 
@@ -113,8 +113,23 @@ const char*		ac_registration(const struct aircraft *craft){
 
 }
 
+/*int main(){
 
+        const char* reg_craft = malloc(6);
+        char* temp = reg_craft;
+        for(int i = 0; i < 6; i++){
+            
+            temp = temp+ i;
+            *temp = 'c';
 
+            printf("%c", *temp );
+        }
+
+        struct aircraft* craft = ac_create(AC_FIXED, reg_craft);
+
+        
+    }
+*/
 #endif
 
 
