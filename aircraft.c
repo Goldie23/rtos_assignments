@@ -11,7 +11,6 @@
 #include "aircraft.h"
 #include "airport.h"
 #include "flight.h"
-#include "main.c"
 
 
 
