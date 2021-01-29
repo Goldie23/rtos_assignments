@@ -74,7 +74,7 @@ void		flight_change_equipment(struct flight* this_flight, struct aircraft* craft
                 ac_release(this_flight->f_aircraft);
                 this_flight->f_aircraft = craft;
                 ac_hold(this_flight->f_aircraft);
-
+                
 
 
 
@@ -89,7 +89,7 @@ void		flight_change_equipment(struct flight* this_flight, struct aircraft* craft
  */
 char*		flight_code(const struct flight* this_flight){
 
-            char* mem = malloc(8*sizeof(char));
+            char* mem = malloc(5*sizeof(char));
 
 
             int i = 0;

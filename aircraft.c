@@ -52,9 +52,6 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
                     *temp = *(reg+i);
                    
 
-                    //printf("\n %d", i);
-                    printf("\n %c", *temp);
-                    printf("\n %p", temp);
                 }
                 
                 
