@@ -45,7 +45,7 @@ struct aircraft*	ac_create(enum aircraft_kind kind, const char *reg){
 				struct aircraft* new_craft = malloc(sizeof(struct aircraft));
 				new_craft->kind = kind;
 				new_craft->reg = reg;
-                new_craft->refs = 0;
+                new_craft->refs = 1;
                 
                 return new_craft;
 }

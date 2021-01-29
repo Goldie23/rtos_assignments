@@ -23,7 +23,7 @@
         struct airport* new_port = malloc(sizeof(struct airport));
         new_port->icao_code = icao_code;
         new_port->flight_size = 0;
-        new_port->refs = 0;
+        new_port->refs = 1;
 
 
         return new_port;
