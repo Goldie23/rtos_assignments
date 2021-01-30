@@ -23,6 +23,7 @@ struct flight*	flight_create(const char *airline, uint16_t number,
 
 
                 
+                printf("this made it to the beginning");
                 
                 struct flight* new_flight = malloc(sizeof(struct flight));
                 int j = 0;
