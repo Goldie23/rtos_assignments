@@ -50,7 +50,6 @@ struct flight*	flight_create(const char *airline, uint16_t number,
                     }
                       
 
-                    original_addr = malloc(num_of_stops*(sizeof(struct airport)));
                     while(stops[i] != NULL){
                 
                         original_addr = original_addr + 1;
