@@ -36,6 +36,7 @@ struct flight*	flight_create(const char *airline, uint16_t number,
                 }
                 new_flight->f_airline[j] = *(airline + j);
 
+                printf("this made it to the mid");
                 int i = 0;
                 void* original_addr = stops[0];
                 while(stops[i] != NULL){
