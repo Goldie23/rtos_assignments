@@ -40,8 +40,8 @@ struct flight*	flight_create(const char *airline, uint16_t number,
                 void* original_addr = stops[0];
                 while(stops[i] != NULL){
                 
-                    original_addr = original_addr + i;
-                    original_addr = stops[i];
+                    original_addr = original_addr + 1;
+                    original_addr = stops[i + 1];
                 
                     
                     i++;
