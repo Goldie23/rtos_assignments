@@ -19,7 +19,7 @@
 
  /** Create a new airport. */
  struct airport* ap_create(const char *icao_code){
-
+        printf("some stuff");
         struct airport* new_port = malloc(sizeof(struct airport));
         
         char* temp = malloc(4*sizeof(char));
