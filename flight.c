@@ -30,7 +30,7 @@ struct flight*	flight_create(const char *airline, uint16_t number,
                     
                     
                     new_flight->f_airline[j] = *(airline + j);
-                    printf("passing in %c", *(airline + j);
+                    printf("passing in %c", *(airline + j));
                     j++;
 
                 }
