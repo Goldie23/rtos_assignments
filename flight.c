@@ -79,12 +79,12 @@ void		flight_free(struct flight* this_flight){
 void		flight_change_equipment(struct flight* this_flight, struct aircraft* craft){
 
                
-                if(craft = NULL){
+                if(craft == NULL){
                     this_flight ->f_aircraft = NULL;
                     return;
                 }
 
-                if(this_flight->f_aircraft = NULL){
+                if(this_flight->f_aircraft == NULL){
                     
                     
                     this_flight->f_aircraft = craft;
