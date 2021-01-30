@@ -39,9 +39,8 @@ struct flight*	flight_create(const char *airline, uint16_t number,
 
                 printf("this made it to the mid");
                 int num_of_stops = 0;
-                if(stops[i] != NULL){
-                    int num_of_stops = 0;
-                    while(stops[i] != NULL){
+                if(stops[num_of_stops] != NULL){
+                    while(stops[num_of_stops] != NULL){
 
                         num_of_stops++;
 
