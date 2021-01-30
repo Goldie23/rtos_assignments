@@ -84,7 +84,7 @@ void		flight_change_equipment(struct flight* this_flight, struct aircraft* craft
                     return;
                 }
 
-                if(this_flight->f_aircraft != NULL){
+                if(this_flight->f_aircraft = NULL){
                     
                     
                     this_flight->f_aircraft = craft;
@@ -93,11 +93,11 @@ void		flight_change_equipment(struct flight* this_flight, struct aircraft* craft
                     return;
                 }
 
-
+                if(this_flight->f_aircraft != NULL){
                 ac_release(this_flight->f_aircraft);
                 this_flight->f_aircraft = craft;
                 ac_hold(this_flight->f_aircraft);
-                
+                }
 
 
 
