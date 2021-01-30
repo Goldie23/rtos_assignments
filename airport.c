@@ -63,14 +63,14 @@
 
 
                 printf("\n %d", new_flight->f_stop_count);
-/*
+
                 for(int i = 0; i < new_flight->f_stop_count; i++){
                     if(*(new_flight->f_stops+i) == port)
                         validStop = true;
 
                 }
 
-*/
+
             if(validStop){
                 port->flight_size++;
                 port = realloc(port, sizeof(struct airport) + port->flight_size);
