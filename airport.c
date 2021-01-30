@@ -58,7 +58,7 @@
  int     ap_add_flight(struct airport* port, struct flight* new_flight){
             
                 
-
+/*
                 bool validStop = false;
 
 
@@ -71,14 +71,14 @@
 
             if(validStop){
                 port->flight_size++;
-            //    port = realloc(port, sizeof(struct airport) + port->flight_size);
-//                port->flights[port->flight_size] = new_flight;
+                port = realloc(port, sizeof(struct airport) + port->flight_size);
+                port->flights[port->flight_size] = new_flight;
 
 
                 return 0;
 
             }
-
+*/
             return -1;
 
 
