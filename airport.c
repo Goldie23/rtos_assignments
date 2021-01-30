@@ -65,7 +65,7 @@
                 printf("\n %d", new_flight->f_stop_count);
 
                 for(int i = 0; i < new_flight->f_stop_count; i++){
-                        printf("\n %c", (*(new_flight->f_stops))->icao_code);
+                        printf("\n %s", (*(new_flight->f_stops))->icao_code);
              //           validStop = true;
                //         printf("flight was found!\n");
                 }
