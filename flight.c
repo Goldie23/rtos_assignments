@@ -63,7 +63,13 @@ struct flight*	flight_create(const char *airline, uint16_t number,
 void		flight_free(struct flight* this_flight){
 
                 if(this_flight != NULL){
+                    
+                    if(this_flight->f_aircraft != NULL){
+                        ac_release(this_flight->f_aircraft);
+                    }
+
                     free(this_flight);
+
                 }
 
 
@@ -94,11 +100,9 @@ void		flight_change_equipment(struct flight* this_flight, struct aircraft* craft
                     return;
                 }
 
-                if(this_flight->f_aircraft != NULL){
-                ac_release(this_flight->f_aircraft);
-                this_flight->f_aircraft = craft;
-                ac_hold(this_flight->f_aircraft);
-                }
+                    ac_release(this_flight->f_aircraft);
+                    this_flight->f_aircraft = craft;
+                    ac_hold(this_flight->f_aircraft);
 
 
 
