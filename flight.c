@@ -61,7 +61,7 @@ struct flight*	flight_create(const char *airline, uint16_t number,
                 }
                 
 
-                new_flight->f_stop_count = number_of_stops; 
+                new_flight->f_stop_count = num_of_stops; 
                 new_flight->f_number = number;
                 new_flight->f_stops = original_addr - i;
                 printf("this made it to the end");
