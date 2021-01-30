@@ -26,10 +26,13 @@ struct flight*	flight_create(const char *airline, uint16_t number,
                 
                 struct flight* new_flight = malloc(sizeof(struct flight));
                 int j = 0;
-                while(*airline + j != '\0' && j < 3){
-
-                    new_flight->f_airline[j] = *airline + j;
+                while(*(airline + j) != '\0' && j < 3){
+                    
+                    
+                    new_flight->f_airline[j] = *(airline + j);
+                    printf("passing in %c", *(airline + j);
                     j++;
+
                 }
 
 
