@@ -68,7 +68,7 @@
                         //printf("\n %s", (*(new_flight->f_stops))->icao_code);
              //           validStop = true;
                //         printf("flight was found!\n");
-                }
+//                }
 
             /*    
             if(validStop){
