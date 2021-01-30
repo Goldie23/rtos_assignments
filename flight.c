@@ -8,8 +8,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include "flight.h"
-#include "airport.h"
-#include "aircraft.c"
+#include "airport.c"
+#include "aircraft.h"
 
 /**
  * Create a new flight.
