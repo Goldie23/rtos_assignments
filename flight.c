@@ -97,8 +97,9 @@ char*		flight_code(const struct flight* this_flight){
             while(this_flight->f_airline[i] != '\0'){
                 //temp_addr = temp_addr + 1;
                 *temp_addr = this_flight->f_airline[i];
-                
-                printf("%c", *temp_addr);
+                printf("\n %d", i);
+                printf("\n %c", this_flight->f_airline[i]); 
+                printf("\n %c", *temp_addr);
                 temp_addr = temp_addr + 1;
                 //printf("%c", *temp_addr);
                 i++;           
