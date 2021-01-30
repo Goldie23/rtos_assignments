@@ -62,14 +62,17 @@
                 bool validStop = false;
 
 
-                printf("\n %d", new_flight->f_stop_count);
+                //printf("\n %d", new_flight->f_stop_count);
 
-                printf("\n %d", (*(new_flight->f_stops))->flight_size);
-                //for(int i = 0; i < new_flight->f_stop_count; i++){
-                        //printf("\n %s", (*(new_flight->f_stops))->icao_code);
-             //           validStop = true;
-               //         printf("flight was found!\n");
-//                }
+              //  printf("\n %d", (*(new_flight->f_stops))->flight_size);
+                for(int i = 0; i < new_flight->f_stop_count; i++){
+                  //      printf("\n %s", (*(new_flight->f_stops))->icao_code);
+                    
+                    if(ap_code((new_flight->f_stops) + i*sizeof(airport) == ap_code(port)){
+                        validStop = true;
+                        printf("flight was found!\n");
+                        }
+                }
 
             /*    
             if(validStop){
