@@ -2,6 +2,7 @@
 #define _AIRPORT_C_
 
 #include <stdlib.h>
+#include <stdio.h>
 #include "airport.h"
 #include "flight.h"
 #include "aircraft.h"
@@ -57,7 +58,7 @@
  int     ap_add_flight(struct airport* port, struct flight* new_flight){
             
                 
-/*
+
                 bool validStop = false;
 
 
@@ -77,7 +78,7 @@
                 return 0;
 
             }
-*/
+
             return -1;
 
 
