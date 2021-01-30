@@ -21,11 +21,15 @@
 struct flight*	flight_create(const char *airline, uint16_t number,
                               struct airport *stops[]){
 
+
+                
+                
                 struct flight* new_flight = malloc(sizeof(struct flight));
-                for(int i = 0; i < 3; i++){
+                int j = 0;
+                while(*airline + j != NULL && j < 3){
 
-                    new_flight->f_airline[i] = *airline + i;
-
+                    new_flight->f_airline[j] = *airline + j;
+                    j++;
                 }
 
 
