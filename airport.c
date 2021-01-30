@@ -58,7 +58,7 @@
  int     ap_add_flight(struct airport* port, struct flight* new_flight){
             
                 
-/*
+
                 bool validStop = false;
 
 
@@ -67,7 +67,7 @@
                         validStop = true;
 
                 }
-
+/*
 
             if(validStop){
                 port->flight_size++;
