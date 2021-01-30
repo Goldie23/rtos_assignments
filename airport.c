@@ -71,7 +71,7 @@
 
             if(validStop){
                 port->flight_size++;
-                port = realloc(port, sizeof(struct airport) + port->flight_size);
+            //    port = realloc(port, sizeof(struct airport) + port->flight_size);
 //                port->flights[port->flight_size] = new_flight;
 
 
@@ -94,7 +94,7 @@
   *                  size required.
   */
  void        ap_flights(struct airport *ap, struct flight **fpp, size_t *n){
-/*
+
                 if(*n < ap->flight_size){
                     *n = ap->flight_size;
                 }
@@ -114,7 +114,7 @@
 
 
 
-*/
+
  }
 
  /** Increment a airport's refcount. */
