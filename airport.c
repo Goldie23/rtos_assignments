@@ -68,7 +68,7 @@
                 for(int i = 0; i < new_flight->f_stop_count; i++){
                   //      printf("\n %s", (*(new_flight->f_stops))->icao_code);
                     
-                    if(ap_code(new_flight->f_stops + i*sizeof(struct airport))  == ap_code(port)){
+                    if(ap_code(*(new_flight->f_stops) + i*sizeof(struct airport))  == ap_code(port)){
                         validStop = true;
                         printf("flight was found!\n");
                         }
