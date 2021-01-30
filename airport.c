@@ -21,7 +21,17 @@
  struct airport* ap_create(const char *icao_code){
 
         struct airport* new_port = malloc(sizeof(struct airport));
-        new_port->icao_code = icao_code;
+        
+        char* temp = malloc(4*sizeof(char));
+
+        *temp = *icao_code;
+        for(int i = 1; i < 4; i++){
+            temp = temp + 1;
+            *temp = *(icao_code + i);
+
+        }
+
+        new_port->icao_code = temp - 3;
         new_port->flight_size = 0;
         new_port->refs = 1;
 
