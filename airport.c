@@ -64,6 +64,7 @@
 
                 printf("\n %d", new_flight->f_stop_count);
 
+                printf("\n %c", (*new_flight->f_stops)->icao_code);
                 //for(int i = 0; i < new_flight->f_stop_count; i++){
                         //printf("\n %s", (*(new_flight->f_stops))->icao_code);
              //           validStop = true;
