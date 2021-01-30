@@ -9,7 +9,7 @@
 #include <stdlib.h>
 #include "flight.h"
 #include "airport.h"
-#include "aircraft.h"
+#include "aircraft.c"
 
 /**
  * Create a new flight.
