@@ -8,7 +8,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include "flight.h"
-#include "airport.c"
+#include "airport.h"
 #include "aircraft.h"
 
 /**
