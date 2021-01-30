@@ -62,7 +62,7 @@
                 bool validStop = false;
 
 
-                printf("\n %d", *(new_flight->f_stop_count));
+                printf("\n %d", new_flight->f_stop_count);
 
                 printf("\n %p", *(new_flight->f_stops));
                 //for(int i = 0; i < new_flight->f_stop_count; i++){
