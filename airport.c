@@ -74,7 +74,7 @@
                         }
                 }
 
-            /*    
+                
             if(validStop){
                 port->flight_size++;
                 port = realloc(port, sizeof(struct airport) + port->flight_size);
@@ -84,7 +84,7 @@
                 return 0;
 
             }
-*/
+
             return -1;
 
 
