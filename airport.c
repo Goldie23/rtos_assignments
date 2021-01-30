@@ -57,8 +57,9 @@
  int     ap_add_flight(struct airport* port, struct flight* new_flight){
             
                 
-
+/*
                 bool validStop = false;
+
 
                 for(int i = 0; i < new_flight->f_stop_count; i++){
                     if(*(new_flight->f_stops+i) == port)
@@ -76,7 +77,7 @@
                 return 0;
 
             }
-
+*/
             return -1;
 
 
