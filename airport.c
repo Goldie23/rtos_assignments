@@ -89,7 +89,7 @@
 
                 struct flight* flights_copy = malloc(*n*sizeof(struct flight));
                 void* original_spot = flights_copy;
-                for(int i = 0; i < ap->flight_size + 1; i++){
+                for(int i = 0; i < ap->flight_size; i++){
                     flights_copy = flights_copy + 1;
                     
                     flights_copy = ap->flights[i];
