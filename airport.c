@@ -71,7 +71,7 @@
 */
             if(validStop){
                 port->flight_size++;
-                //port = realloc(port, sizeof(struct airport) + port->flight_size);
+                port = realloc(port, sizeof(struct airport) + port->flight_size);
                 port->flights[port->flight_size] = new_flight;
 
 
