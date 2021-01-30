@@ -65,12 +65,12 @@
                 printf("\n %d", new_flight->f_stop_count);
 
                 for(int i = 0; i < new_flight->f_stop_count; i++){
-                    if(ap_code(*(new_flight->f_stops+i)) == ap_code(port) )
+                    if(ap_code(*(new_flight->(f_stops+i))) == ap_code(port) )
                         validStop = true;
-
+                        printf("flight was found!\n");
                 }
 
-                
+            /*    
             if(validStop){
                 port->flight_size++;
                 port = realloc(port, sizeof(struct airport) + port->flight_size);
@@ -80,7 +80,7 @@
                 return 0;
 
             }
-
+*/
             return -1;
 
 
